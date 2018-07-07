@@ -1,0 +1,54 @@
+.toasterMainDiv {
+  font-family: Arial, Helvetica, sans-serif;
+  display: none;
+  position:fixed;
+  top: 5%;
+  left: 50%;
+  width:30em;
+  margin-left: -15em;
+  padding: 12px;
+  border-width: 1px 3px 2px 3px;
+  border-style: solid;
+  border-radius: 3px;
+  box-shadow: 3px 3px 15px #888888;
+}
+.toaster-title {
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+.toaster-text {
+  text-align: justify;
+  font-size: 1em;
+}
+.neutral {
+  color: #777;
+  background-color: #EAEAEA;
+  border-color: #D3D3D3;
+}
+.error {
+  color: #fff;
+  background-color: #FF8282;
+  border-color: #FF5151;
+}
+.success {
+  color: #248900;
+  background-color: #A3FF82;
+  border-color: #7DFF4F;
+}
+.info {
+  color: #fff;
+  background-color: #829DFF;
+  border-color: #4B72FC;
+}
+.warning {
+  color: #fff;
+  background-color: #FFC882;
+  border-color: #FFAF4F;
+}
+.notHide {
+  display: block;
+}
+.notShow {
+  display: none;
+}
