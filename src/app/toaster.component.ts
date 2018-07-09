@@ -11,15 +11,13 @@ import { ToasterPayload } from './app.interface';
   styleUrls: ['./toaster.component.css']
 })
 export class ToasterComponent implements OnInit, OnDestroy {
-  displayOrNot: string = "notShow";
-	count: number = 0;
-  public showloader: boolean = false;      
+  displayOrNot: string = "notShow";    
   private subscription: Subscription;
   private timer: Observable<any>;
   payload: ToasterPayload;
 
   public ngOnInit() {
-    this.payload = {toasterType: "", toasterTitle: "", toasterText: ""};
+    this.payload = {toasterType: "", toasterTitle: "", toasterText: "", timeToDisplay: 0};
   }
   
   public ngOnDestroy() {
@@ -31,7 +29,7 @@ export class ToasterComponent implements OnInit, OnDestroy {
   public setTimer(payload: ToasterPayload) {
     this.payload = payload;
     this.displayOrNot = "notHide";
-    this.timer = Observable.timer(5000);
+    this.timer = Observable.timer(payload.timeToDisplay);
     this.subscription = this.timer.subscribe(() => {
       this.displayOrNot = "notShow";
     });
